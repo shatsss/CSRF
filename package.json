@@ -1,23 +1,33 @@
 {
-  "name": "csrf",
-  "version": "0.0.0",
-  "private": true,
+  "name": "@risingstack/nodehero-authentication",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RisingStack/nodehero-authentication.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RisingStack/nodehero-authentication/issues"
+  },
+  "homepage": "https://github.com/RisingStack/nodehero-authentication#readme",
   "dependencies": {
-    "bcrypt": "^1.0.3",
-    "body-parser": "~1.18.2",
-    "connect-redis": "^3.3.2",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.6.9",
-    "express": "~4.15.5",
-    "express-handlebars": "^3.0.0",
-    "express-session": "^1.15.6",
-    "jade": "~1.11.0",
-    "morgan": "~1.9.0",
-    "passport": "^0.4.0",
-    "passport-local": "^1.0.0",
-    "serve-favicon": "~2.4.5"
+    "bcrypt": "1.0.2",
+    "body-parser": "1.15.1",
+    "connect-redis": "3.0.2",
+    "cookie-parser": "^1.4.3",
+    "express": "4.13.4",
+    "express-handlebars": "3.0.0",
+    "express-session": "1.13.0",
+    "passport": "^0.3.2",
+    "passport-local": "1.0.0",
+    "requier": "0.0.1"
   }
 }

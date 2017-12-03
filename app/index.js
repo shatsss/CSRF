@@ -9,20 +9,22 @@ const RedisStore = require('connect-redis')(session)
 
 const config = require('../config')
 const app = express()
-
 app.use(bodyParser.urlencoded({
     extended: false
 }))
 
 require('./authentication').init(app)
 
+
 app.use(session({
     store: new RedisStore({
         url: config.redisStore.url
     }),
     secret: config.redisStore.secret,
-    resave: false,
-    saveUninitialized: false
+    resave: true,
+
+    saveUninitialized: true,
+    cookie: {maxAge: 60000, secure: false}
 }))
 
 app.use(passport.initialize())

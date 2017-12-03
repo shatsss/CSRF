@@ -11,7 +11,7 @@ const salt = bcrypt.genSaltSync(saltRounds)
 const passwordHash = bcrypt.hashSync(myPlaintextPassword, salt)
 
 const user = {
-    username: 'alon',
+    username: 'abra',
     passwordHash,
     id: 1
 }
@@ -30,6 +30,7 @@ passport.serializeUser(function (user, cb) {
 passport.deserializeUser(function (username, cb) {
     findUser(username, cb)
 })
+
 
 function initPassport () {
     passport.use(new LocalStrategy(
@@ -59,8 +60,11 @@ function initPassport () {
         }
     ))
 
+
+
+
     passport.authenticationMiddleware = authenticationMiddleware
 }
 
 
-module.exports = initPassport
+module.exports = initPassport;
